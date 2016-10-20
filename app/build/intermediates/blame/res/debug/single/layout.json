@@ -152,12 +152,12 @@
         "source": "C:\\Users\\User\\AndroidStudioProjects\\DailyFoto\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\abc_screen_content_include.xml"
     },
     {
-        "merged": "C:\\Users\\User\\AndroidStudioProjects\\DailyFoto\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
-        "source": "C:\\Users\\User\\AndroidStudioProjects\\DailyFoto\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
-    },
-    {
         "merged": "C:\\Users\\User\\AndroidStudioProjects\\DailyFoto\\app\\build\\intermediates\\res\\merged\\debug\\layout\\gallery_item.xml",
         "source": "C:\\Users\\User\\AndroidStudioProjects\\DailyFoto\\app\\src\\main\\res\\layout\\gallery_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\DailyFoto\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\DailyFoto\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
     },
     {
         "merged": "C:\\Users\\User\\AndroidStudioProjects\\DailyFoto\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",

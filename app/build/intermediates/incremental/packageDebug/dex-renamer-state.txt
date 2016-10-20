@@ -1,4 +1,4 @@
-#Wed Oct 19 14:41:07 CDT 2016
+#Wed Oct 19 23:46:39 CDT 2016
 base.0=C\:\\Users\\User\\AndroidStudioProjects\\DailyFoto\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_3a5cb6b268a9dfd267d61b3e04e3ae28c1fc1e21
 renamed.1=classes2.dex
 renamed.0=classes.dex

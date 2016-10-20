@@ -12,15 +12,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\User\AndroidStudioProjects\DailyFoto\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
-        <dex dex="C:\Users\User\AndroidStudioProjects\DailyFoto\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-24.2.1_9c5f1b9a9e814487d667405a0750d997ddcfe185\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\User\AndroidStudioProjects\DailyFoto\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
@@ -54,24 +45,6 @@
         revision="24.0.3"
         sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
         <dex dex="C:\Users\User\AndroidStudioProjects\DailyFoto\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-24.2.1_3503a75c58d417e004f79bbca2b66a17472af839\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\User\AndroidStudioProjects\DailyFoto\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\libs\internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
-        <dex dex="C:\Users\User\AndroidStudioProjects\DailyFoto\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_1be3483b21768d51e219ec0a01d8427467e77f8b\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\User\AndroidStudioProjects\DailyFoto\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
-        <dex dex="C:\Users\User\AndroidStudioProjects\DailyFoto\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-24.2.1_904e717e88d4126f73bb605c7d4f5d87a6d375b6\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -111,6 +84,51 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\User\AndroidStudioProjects\DailyFoto\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="C:\Users\User\AndroidStudioProjects\DailyFoto\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-24.2.1_dff8acc5b13e14fb12d9ce54a9787a6fcfe8b18e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\User\AndroidStudioProjects\DailyFoto\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="3ce323def45830f907bd4168c82d7d04ba02685d">
+        <dex dex="C:\Users\User\AndroidStudioProjects\DailyFoto\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_d3596e9489d02766b2dbc781f0c0040421bde365\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\User\AndroidStudioProjects\DailyFoto\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="C:\Users\User\AndroidStudioProjects\DailyFoto\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-24.2.1_9c5f1b9a9e814487d667405a0750d997ddcfe185\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\User\AndroidStudioProjects\DailyFoto\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="C:\Users\User\AndroidStudioProjects\DailyFoto\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_1be3483b21768d51e219ec0a01d8427467e77f8b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\User\AndroidStudioProjects\DailyFoto\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="C:\Users\User\AndroidStudioProjects\DailyFoto\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-24.2.1_904e717e88d4126f73bb605c7d4f5d87a6d375b6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\User\AndroidStudioProjects\DailyFoto\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
         jumboMode="true"
         optimize="true"
@@ -129,29 +147,11 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\User\AndroidStudioProjects\DailyFoto\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
-        <dex dex="C:\Users\User\AndroidStudioProjects\DailyFoto\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-24.2.1_dff8acc5b13e14fb12d9ce54a9787a6fcfe8b18e\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\User\AndroidStudioProjects\DailyFoto\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="470374160b8df655733a4b07316363cb2685b173">
-        <dex dex="C:\Users\User\AndroidStudioProjects\DailyFoto\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_d3596e9489d02766b2dbc781f0c0040421bde365\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\User\AndroidStudioProjects\DailyFoto\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
-        sha1="9ecf4fe3ba6ba4c0b80176ac914a85421c837c99">
+        sha1="8ede99860e0eec0146f943d955fabc8e8e33f626">
         <dex dex="C:\Users\User\AndroidStudioProjects\DailyFoto\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_3a5cb6b268a9dfd267d61b3e04e3ae28c1fc1e21\classes.dex" />
     </item>
 
