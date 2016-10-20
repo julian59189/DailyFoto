@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    abi="armeabi-v7a,armeabi"
+    api-level="23"
+    density="560dpi"
+    format="8"
+    plugin-version="2.2.1"
+    timestamp="422961960338566"
+    token="-1874401323768245493"
+    verifier="FULL_BUILD_REQUESTED" >
+
+    <task
+        name="javac"
+        duration="6520" />
+    <task
+        name="instant-run-dex"
+        duration="0" />
+    <task
+        name="instant-run-transform"
+        duration="1505" />
+    <task
+        name="verifier"
+        duration="254" />
+
+    <artifact
+        location="C:\Users\User\AndroidStudioProjects\DailyFoto\app\build\outputs\apk\app-debug.apk"
+        type="MAIN" />
+
+    <build
+        timestamp="422961960338566"
+        verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="C:\Users\User\AndroidStudioProjects\DailyFoto\app\build\outputs\apk\app-debug.apk"
+            type="MAIN" />
+    </build>
+
+</instant-run>

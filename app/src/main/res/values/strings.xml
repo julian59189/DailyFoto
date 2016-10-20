@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Daily Foto</string>
+
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="hi_your_detailed_notification_view_goes_here">Hi, Your Detailed notification view goes here....</string>
+    <string name="show_notification">Show Notification</string>
+    <string name="clear_notification">Clear Notification</string>
+    <string name="take_picture">Take Picture</string>
+    <string name="debug">Debug</string>
+    <string name="debug2">Debug2</string>
+    <string name="singleimagefromgallery">SingleImageFromGallery</string>
+    <string name="diplayimagesinfolder">diplayImagesInFolder</string>
+    <string name="grant_storage_permission">Grant Storage permissions</string>
+</resources>
