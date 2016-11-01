@@ -5,8 +5,8 @@
     density="560dpi"
     format="8"
     plugin-version="2.2.2"
-    timestamp="31171676182880"
-    token="-1874401323768245493"
+    timestamp="11909285063058"
+    token="3173471437961047778"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
@@ -23,14 +23,21 @@
         duration="0" />
 
     <build
-        timestamp="31042381787381"
+        timestamp="11361981126869"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="C:\Users\User\AndroidStudioProjects\DailyFoto\app\build\outputs\apk\app-debug.apk"
+            location="C:\Users\julia_000\DailyFoto\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
     </build>
     <build
-        timestamp="31171676182880"
+        timestamp="11750526059530"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="C:\Users\julia_000\DailyFoto\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_2\classes.dex"
+            type="DEX" />
+    </build>
+    <build
+        timestamp="11909285063058"
         verifier="COLD_SWAP_REQUESTED" />
 
 </instant-run>

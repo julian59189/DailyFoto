@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         initialise();
-        checkFolder();
+        //checkFolder();
 
         Log.d(TAG, "checks done");
 
@@ -182,12 +182,12 @@ public class MainActivity extends AppCompatActivity {
         if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
             // Create the File where the photo should go
             File photoFile = null;
-            try {
-                photoFile = createImageFile();
-            } catch (IOException ex) {
-                // Error occurred while creating the File
-                Log.d(TAG, "create ImageFile failed");
-            }
+            //try {
+            //    photoFile = createImageFile();
+            //} catch (IOException ex) {
+            //    // Error occurred while creating the File
+            //    Log.d(TAG, "create ImageFile failed");
+            //}
             // Continue only if the File was successfully created
             if (photoFile != null) {
                 Log.d(TAG, "we have a photo file");

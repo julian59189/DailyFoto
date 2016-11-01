@@ -1,7 +1,7 @@
-#Wed Oct 19 23:46:39 CDT 2016
-base.0=C\:\\Users\\User\\AndroidStudioProjects\\DailyFoto\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_3a5cb6b268a9dfd267d61b3e04e3ae28c1fc1e21
+#Tue Nov 01 22:31:32 CET 2016
+base.0=C\:\\Users\\julia_000\\DailyFoto\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_c39684926bf623c402b34eb7ec6b4b594978ba69
 renamed.1=classes2.dex
 renamed.0=classes.dex
-file.1=C\:\\Users\\User\\AndroidStudioProjects\\DailyFoto\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_d3596e9489d02766b2dbc781f0c0040421bde365\\classes.dex
-base.1=C\:\\Users\\User\\AndroidStudioProjects\\DailyFoto\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_d3596e9489d02766b2dbc781f0c0040421bde365
-file.0=C\:\\Users\\User\\AndroidStudioProjects\\DailyFoto\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_3a5cb6b268a9dfd267d61b3e04e3ae28c1fc1e21\\classes.dex
+file.1=C\:\\Users\\julia_000\\DailyFoto\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_e7d4ae45eb7bf316df5da7e51acb179ff0e46b1f\\classes.dex
+base.1=C\:\\Users\\julia_000\\DailyFoto\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_e7d4ae45eb7bf316df5da7e51acb179ff0e46b1f
+file.0=C\:\\Users\\julia_000\\DailyFoto\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_c39684926bf623c402b34eb7ec6b4b594978ba69\\classes.dex
