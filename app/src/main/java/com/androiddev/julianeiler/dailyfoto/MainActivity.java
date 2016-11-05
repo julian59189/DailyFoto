@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         initialise();
-        //checkFolder();
+        checkFolder();
 
         Log.d(TAG, "checks done");
 
@@ -107,34 +107,34 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View arg0) {
                 Log.d(TAG, "btnTakePicture OnclickListener");
-                //dispatchTakePictureIntent();
+                dispatchTakePictureIntent();
 
                 //btnTakePicture.setText("Retake Picture");
             }
         });
 
-        btnDebug.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View arg0) {
-                Log.d(TAG, "btnDebug OnclickListener");
-                /*File folder = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
-                allFiles = folder.listFiles();
-                new SingleMediaScanner(MainActivity.this, allFiles[0]);*/
-                Intent i = new Intent(getApplicationContext(),
-                        AndroidCustomGalleryActivity.class);
-                startActivity(i);
-            }
-        });
-
-        btnDebug2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View arg0) {
-                Log.d(TAG, "btnDebug2 OnclickListener");
-                Intent i = new Intent(getApplicationContext(),
-                        AndroidDiplayImage.class);
-                startActivity(i);
-            }
-        });
+//        btnDebug.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View arg0) {
+//                Log.d(TAG, "btnDebug OnclickListener");
+//                /*File folder = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
+//                allFiles = folder.listFiles();
+//                new SingleMediaScanner(MainActivity.this, allFiles[0]);*/
+//                Intent i = new Intent(getApplicationContext(),
+//                        AndroidCustomGalleryActivity.class);
+//                startActivity(i);
+//            }
+//        });
+//
+//        btnDebug2.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View arg0) {
+//                Log.d(TAG, "btnDebug2 OnclickListener");
+//                Intent i = new Intent(getApplicationContext(),
+//                        AndroidDiplayImage.class);
+//                startActivity(i);
+//            }
+//        });
 
         Log.d(TAG, "onClickListeners Created");
     }
@@ -142,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onResume() {
         super.onResume();  // Always call the superclass method first
-        checkPermissions();
+//        checkPermissions();
     }
 
     @Override
@@ -150,30 +150,30 @@ public class MainActivity extends AppCompatActivity {
         super.onPause();  // Always call the superclass method first
     }
 
-    private void displayPicture() {
-        String yourFilePath = context.getFilesDir() + "/" + "Pictures/JPEG_20161018_.jpg";
-        Log.d(TAG, "context_dir: " + context.getFilesDir());
-        File imgFile = new File( yourFilePath );
-
-
-
-        //File imgFile = new  File("Android/data/com.androiddev.julianeiler.dailyfoto/files/Pictures/JPEG_20161018_.jpg");
-        if(imgFile.exists()){
-            Log.d(TAG, "imageFileexist");
-
-
-            int resID = getResources().getIdentifier(yourFilePath, null, getPackageName());
-            //mGridView.setImageResource(resID);
-
-            //Bitmap myBitmap = BitmapFactory.decodeFile(imgFile.getAbsolutePath());
-            //mImageView.setImageBitmap(myBitmap);
-
-        }
-
-        Bitmap myImg = BitmapFactory.decodeFile("Android/data/com.androiddev.julianeiler.dailyfoto/files/Pictures/JPEG_20161018_.jpg");
-       // mImageView.setImageBitmap(myImg);
-
-    }
+//    private void displayPicture() {
+//        String yourFilePath = context.getFilesDir() + "/" + "Pictures/JPEG_20161018_.jpg";
+//        Log.d(TAG, "context_dir: " + context.getFilesDir());
+//        File imgFile = new File( yourFilePath );
+//
+//
+//
+//        //File imgFile = new  File("Android/data/com.androiddev.julianeiler.dailyfoto/files/Pictures/JPEG_20161018_.jpg");
+//        if(imgFile.exists()){
+//            Log.d(TAG, "imageFileexist");
+//
+//
+//            int resID = getResources().getIdentifier(yourFilePath, null, getPackageName());
+//            //mGridView.setImageResource(resID);
+//
+//            //Bitmap myBitmap = BitmapFactory.decodeFile(imgFile.getAbsolutePath());
+//            //mImageView.setImageBitmap(myBitmap);
+//
+//        }
+//
+//        Bitmap myImg = BitmapFactory.decodeFile("Android/data/com.androiddev.julianeiler.dailyfoto/files/Pictures/JPEG_20161018_.jpg");
+//       // mImageView.setImageBitmap(myImg);
+//
+//    }
 
     private void dispatchTakePictureIntent() {
         Log.d(TAG, "dispatchTakePictureIntent");
@@ -182,12 +182,12 @@ public class MainActivity extends AppCompatActivity {
         if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
             // Create the File where the photo should go
             File photoFile = null;
-            //try {
-            //    photoFile = createImageFile();
-            //} catch (IOException ex) {
-            //    // Error occurred while creating the File
-            //    Log.d(TAG, "create ImageFile failed");
-            //}
+            try {
+                photoFile = createImageFile();
+            } catch (IOException ex) {
+                // Error occurred while creating the File
+                Log.d(TAG, "create ImageFile failed");
+            }
             // Continue only if the File was successfully created
             if (photoFile != null) {
                 Log.d(TAG, "we have a photo file");
@@ -242,23 +242,23 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    private void checkPermissions() {
-        //Log.d(TAG, "checkPermissions");
-        // Assume thisActivity is the current activity
-        ActivityCompat.requestPermissions(MainActivity.this,
-                new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
-                MY_PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE);
-
-        if (!Environment.getExternalStorageDirectory().canWrite()){
-            //btnTakePicture.setBackgroundColor(Color.RED);
-            btnTakePicture.setEnabled(false);
-            btnTakePicture.setText(R.string.grant_storage_permission);
-        }
-        else{
-            btnTakePicture.setEnabled(true);
-            btnTakePicture.setText(R.string.take_picture);
-        }
-    }
+//    private void checkPermissions() {
+//        //Log.d(TAG, "checkPermissions");
+//        // Assume thisActivity is the current activity
+//        ActivityCompat.requestPermissions(MainActivity.this,
+//                new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
+//                MY_PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE);
+//
+//        if (!Environment.getExternalStorageDirectory().canWrite()){
+//            //btnTakePicture.setBackgroundColor(Color.RED);
+//            btnTakePicture.setEnabled(false);
+//            btnTakePicture.setText(R.string.grant_storage_permission);
+//        }
+//        else{
+//            btnTakePicture.setEnabled(true);
+//            btnTakePicture.setText(R.string.take_picture);
+//        }
+//    }
 
     /*@Override
     public void onRequestPermissionsResult(int requestCode,
@@ -297,90 +297,90 @@ public class MainActivity extends AppCompatActivity {
         btnShow = (Button) findViewById(R.id.btnShowNotification);
         btnClear = (Button) findViewById(R.id.btnClearNotification);
         btnTakePicture = (Button) findViewById(R.id.btnTakePicture);
-        btnDebug = (Button) findViewById(R.id.btnDebug);
-        btnDebug2 = (Button) findViewById(R.id.btnDebug2);
+//        btnDebug = (Button) findViewById(R.id.btnDebug);
+//        btnDebug2 = (Button) findViewById(R.id.btnDebug2);
     }
 
-    public class SingleMediaScanner implements MediaScannerConnection.MediaScannerConnectionClient {
-
-        private MediaScannerConnection mMs;
-        private File mFile;
-
-        public SingleMediaScanner(Context context, File f) {
-            mFile = f;
-            mMs = new MediaScannerConnection(context, this);
-            mMs.connect();
-        }
-
-        public void onMediaScannerConnected() {
-            mMs.scanFile(mFile.getAbsolutePath(), null);
-        }
-
-        public void onScanCompleted(String path, Uri uri) {
-            Intent intent = new Intent(Intent.ACTION_VIEW);
-            intent.setData(uri);
-            startActivity(intent);
-            mMs.disconnect();
-        }
-
-    }
-
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        Log.d(TAG, "onActivityResult");
-        if (requestCode == REQUEST_TAKE_PHOTO && resultCode == RESULT_OK) {
-            //Bundle extras = data.getExtras();
-            //Bitmap imageBitmap = (Bitmap) extras.get("data");
-            //mImageView.setImageBitmap(imageBitmap);
-
-            String yourFilePath = context.getFilesDir() + "/" + "Pictures/JPEG_20161018_.jpg";
-            Log.d(TAG, "context_dir: " + context.getFilesDir());
-            File imgFile = new File( yourFilePath );
-
-            //File imgFile = new  File("Android/data/com.androiddev.julianeiler.dailyfoto/files/Pictures/JPEG_20161018_.jpg");
-            if(imgFile.exists()){
-                Log.d(TAG, "imageFileexist");
-                Bitmap myBitmap = BitmapFactory.decodeFile(imgFile.getAbsolutePath());
-                //mImageView.setImageBitmap(myBitmap);
-
-            }
-
-            Log.d(TAG, "res: " + photoURI.getPath());
-
-            Bitmap myImg = BitmapFactory.decodeFile("Android/data/com.androiddev.julianeiler.dailyfoto/files/Pictures/JPEG_20161018_.jpg");
-            //mImageView.setImageBitmap(myImg);
-        }
-
-        Log.d(TAG, "onActivityResult...done");
-    }
+//    public class SingleMediaScanner implements MediaScannerConnection.MediaScannerConnectionClient {
+//
+//        private MediaScannerConnection mMs;
+//        private File mFile;
+//
+//        public SingleMediaScanner(Context context, File f) {
+//            mFile = f;
+//            mMs = new MediaScannerConnection(context, this);
+//            mMs.connect();
+//        }
+//
+//        public void onMediaScannerConnected() {
+//            mMs.scanFile(mFile.getAbsolutePath(), null);
+//        }
+//
+//        public void onScanCompleted(String path, Uri uri) {
+//            Intent intent = new Intent(Intent.ACTION_VIEW);
+//            intent.setData(uri);
+//            startActivity(intent);
+//            mMs.disconnect();
+//        }
+//
+//    }
 
 
-    private String saveToInternalStorage(Bitmap bitmapImage){
-        Log.d(TAG, "saveToInternalStorage");
-        ContextWrapper cw = new ContextWrapper(getApplicationContext());
-        // path to /data/data/yourapp/app_data/imageDir
-        File directory = cw.getDir("imageDir", Context.MODE_PRIVATE);
-        // Create imageDir
-        File mypath=new File(directory,"profile.jpg");
+//    @Override
+//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+//        Log.d(TAG, "onActivityResult");
+//        if (requestCode == REQUEST_TAKE_PHOTO && resultCode == RESULT_OK) {
+//            //Bundle extras = data.getExtras();
+//            //Bitmap imageBitmap = (Bitmap) extras.get("data");
+//            //mImageView.setImageBitmap(imageBitmap);
+//
+//            String yourFilePath = context.getFilesDir() + "/" + "Pictures/JPEG_20161018_.jpg";
+//            Log.d(TAG, "context_dir: " + context.getFilesDir());
+//            File imgFile = new File( yourFilePath );
+//
+//            //File imgFile = new  File("Android/data/com.androiddev.julianeiler.dailyfoto/files/Pictures/JPEG_20161018_.jpg");
+//            if(imgFile.exists()){
+//                Log.d(TAG, "imageFileexist");
+//                Bitmap myBitmap = BitmapFactory.decodeFile(imgFile.getAbsolutePath());
+//                //mImageView.setImageBitmap(myBitmap);
+//
+//            }
+//
+//            Log.d(TAG, "res: " + photoURI.getPath());
+//
+//            Bitmap myImg = BitmapFactory.decodeFile("Android/data/com.androiddev.julianeiler.dailyfoto/files/Pictures/JPEG_20161018_.jpg");
+//            //mImageView.setImageBitmap(myImg);
+//        }
+//
+//        Log.d(TAG, "onActivityResult...done");
+//    }
 
-        FileOutputStream fos = null;
-        try {
-            fos = new FileOutputStream(mypath);
-            // Use the compress method on the BitMap object to write image to the OutputStream
-            bitmapImage.compress(Bitmap.CompressFormat.PNG, 100, fos);
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                assert fos != null;
-                fos.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-        return directory.getAbsolutePath();
-    }
+//
+//    private String saveToInternalStorage(Bitmap bitmapImage){
+//        Log.d(TAG, "saveToInternalStorage");
+//        ContextWrapper cw = new ContextWrapper(getApplicationContext());
+//        // path to /data/data/yourapp/app_data/imageDir
+//        File directory = cw.getDir("imageDir", Context.MODE_PRIVATE);
+//        // Create imageDir
+//        File mypath=new File(directory,"profile.jpg");
+//
+//        FileOutputStream fos = null;
+//        try {
+//            fos = new FileOutputStream(mypath);
+//            // Use the compress method on the BitMap object to write image to the OutputStream
+//            bitmapImage.compress(Bitmap.CompressFormat.PNG, 100, fos);
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        } finally {
+//            try {
+//                assert fos != null;
+//                fos.close();
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+//        }
+//        return directory.getAbsolutePath();
+//    }
 
 
     private void galleryAddPic() {

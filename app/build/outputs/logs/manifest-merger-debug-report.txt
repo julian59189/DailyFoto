@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\julia_000\DailyFoto\app\src\main\AndroidManifest.xml:2:1-48:12
+ADDED from C:\Users\julia_000\DailyFoto\app\src\main\AndroidManifest.xml:2:1-51:12
 	package
 		ADDED from C:\Users\julia_000\DailyFoto\app\src\main\AndroidManifest.xml:3:5-51
 		INJECTED from C:\Users\julia_000\DailyFoto\app\src\main\AndroidManifest.xml
@@ -28,7 +28,7 @@ ADDED from C:\Users\julia_000\DailyFoto\app\src\main\AndroidManifest.xml:7:5-81
 	android:name
 		ADDED from C:\Users\julia_000\DailyFoto\app\src\main\AndroidManifest.xml:7:22-78
 application
-ADDED from C:\Users\julia_000\DailyFoto\app\src\main\AndroidManifest.xml:9:5-46:19
+ADDED from C:\Users\julia_000\DailyFoto\app\src\main\AndroidManifest.xml:9:5-49:19
 MERGED from [com.android.support:appcompat-v7:24.2.1] C:\Users\julia_000\DailyFoto\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-v4:24.2.1] C:\Users\julia_000\DailyFoto\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-compat:24.2.1] C:\Users\julia_000\DailyFoto\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
@@ -89,7 +89,7 @@ ADDED from C:\Users\julia_000\DailyFoto\app\src\main\AndroidManifest.xml:33:9-38
 	android:name
 		ADDED from C:\Users\julia_000\DailyFoto\app\src\main\AndroidManifest.xml:34:13-47
 provider#android.support.v4.content.FileProvider
-ADDED from C:\Users\julia_000\DailyFoto\app\src\main\AndroidManifest.xml:40:9-45:20
+ADDED from C:\Users\julia_000\DailyFoto\app\src\main\AndroidManifest.xml:40:9-48:20
 	android:authorities
 		ADDED from C:\Users\julia_000\DailyFoto\app\src\main\AndroidManifest.xml:42:13-67
 	android:grantUriPermissions
@@ -98,6 +98,12 @@ ADDED from C:\Users\julia_000\DailyFoto\app\src\main\AndroidManifest.xml:40:9-45
 		ADDED from C:\Users\julia_000\DailyFoto\app\src\main\AndroidManifest.xml:43:13-37
 	android:name
 		ADDED from C:\Users\julia_000\DailyFoto\app\src\main\AndroidManifest.xml:41:13-67
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from C:\Users\julia_000\DailyFoto\app\src\main\AndroidManifest.xml:45:13-47:64
+	android:resource
+		ADDED from C:\Users\julia_000\DailyFoto\app\src\main\AndroidManifest.xml:47:17-51
+	android:name
+		ADDED from C:\Users\julia_000\DailyFoto\app\src\main\AndroidManifest.xml:46:17-67
 uses-sdk
 INJECTED from C:\Users\julia_000\DailyFoto\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:24.2.1] C:\Users\julia_000\DailyFoto\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\AndroidManifest.xml:21:5-23:78

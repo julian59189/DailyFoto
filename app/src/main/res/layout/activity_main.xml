@@ -10,7 +10,6 @@
         android:layout_weight="1">
 
         <Button
-            style="?android:attr/buttonBarStyle"
             android:id="@+id/btnShowNotification"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -18,7 +17,6 @@
             android:layout_weight="1"/>
 
         <Button
-            style="?android:attr/buttonBarStyle"
             android:id="@+id/btnClearNotification"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -40,7 +38,6 @@
 
 
     <Button
-        style="?android:attr/buttonBarStyle"
         android:id="@+id/btnTakePicture"
         android:layout_width="match_parent"
         android:layout_height="100dp"
@@ -56,7 +53,6 @@
         android:layout_weight="1">
 
         <Button
-            style="?android:attr/buttonBarStyle"
             android:id="@+id/btnDebug"
             android:layout_width="match_parent"
             android:layout_height="60dp"
@@ -65,7 +61,6 @@
             android:layout_weight="1"/>
 
         <Button
-            style="?android:attr/buttonBarStyle"
             android:id="@+id/btnDebug2"
             android:layout_width="match_parent"
             android:layout_height="60dp"
