@@ -47,7 +47,7 @@ MERGED from [com.android.support:animated-vector-drawable:24.2.1] C:\Users\julia
 	android:icon
 		ADDED from C:\Users\julia_000\DailyFoto\app\src\main\AndroidManifest.xml:11:9-43
 	android:theme
-		ADDED from C:\Users\julia_000\DailyFoto\app\src\main\AndroidManifest.xml:14:9-40
+		ADDED from C:\Users\julia_000\DailyFoto\app\src\main\AndroidManifest.xml:14:9-65
 activity#com.androiddev.julianeiler.dailyfoto.MainActivity
 ADDED from C:\Users\julia_000\DailyFoto\app\src\main\AndroidManifest.xml:15:9-24:20
 	android:label
@@ -55,7 +55,7 @@ ADDED from C:\Users\julia_000\DailyFoto\app\src\main\AndroidManifest.xml:15:9-24
 	android:configChanges
 		ADDED from C:\Users\julia_000\DailyFoto\app\src\main\AndroidManifest.xml:17:13-74
 	android:theme
-		ADDED from C:\Users\julia_000\DailyFoto\app\src\main\AndroidManifest.xml:19:13-51
+		ADDED from C:\Users\julia_000\DailyFoto\app\src\main\AndroidManifest.xml:19:13-69
 	android:name
 		ADDED from C:\Users\julia_000\DailyFoto\app\src\main\AndroidManifest.xml:16:13-41
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
@@ -75,7 +75,7 @@ ADDED from C:\Users\julia_000\DailyFoto\app\src\main\AndroidManifest.xml:26:9-31
 	android:configChanges
 		ADDED from C:\Users\julia_000\DailyFoto\app\src\main\AndroidManifest.xml:28:9-70
 	android:theme
-		ADDED from C:\Users\julia_000\DailyFoto\app\src\main\AndroidManifest.xml:30:9-47
+		ADDED from C:\Users\julia_000\DailyFoto\app\src\main\AndroidManifest.xml:30:9-65
 	android:name
 		ADDED from C:\Users\julia_000\DailyFoto\app\src\main\AndroidManifest.xml:27:9-53
 activity#com.androiddev.julianeiler.dailyfoto.AndroidDiplayImage
@@ -85,7 +85,7 @@ ADDED from C:\Users\julia_000\DailyFoto\app\src\main\AndroidManifest.xml:33:9-38
 	android:configChanges
 		ADDED from C:\Users\julia_000\DailyFoto\app\src\main\AndroidManifest.xml:35:13-74
 	android:theme
-		ADDED from C:\Users\julia_000\DailyFoto\app\src\main\AndroidManifest.xml:37:13-51
+		ADDED from C:\Users\julia_000\DailyFoto\app\src\main\AndroidManifest.xml:37:13-69
 	android:name
 		ADDED from C:\Users\julia_000\DailyFoto\app\src\main\AndroidManifest.xml:34:13-47
 provider#android.support.v4.content.FileProvider

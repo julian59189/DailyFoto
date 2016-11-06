@@ -76,6 +76,10 @@
         "source": "C:\\Users\\julia_000\\DailyFoto\\app\\src\\main\\res\\drawable\\abc.jpg"
     },
     {
+        "merged": "C:\\Users\\julia_000\\DailyFoto\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_photo_camera_black_24dp.png",
+        "source": "C:\\Users\\julia_000\\DailyFoto\\app\\src\\main\\res\\drawable\\ic_photo_camera_black_24dp.png"
+    },
+    {
         "merged": "C:\\Users\\julia_000\\DailyFoto\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\selfie_icon.png",
         "source": "C:\\Users\\julia_000\\DailyFoto\\app\\src\\main\\res\\drawable\\selfie_icon.png"
     },
@@ -98,6 +102,10 @@
     {
         "merged": "C:\\Users\\julia_000\\DailyFoto\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\selfie.png",
         "source": "C:\\Users\\julia_000\\DailyFoto\\app\\src\\main\\res\\drawable\\selfie.png"
+    },
+    {
+        "merged": "C:\\Users\\julia_000\\DailyFoto\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_camera_black_24dp.png",
+        "source": "C:\\Users\\julia_000\\DailyFoto\\app\\src\\main\\res\\drawable\\ic_camera_black_24dp.png"
     },
     {
         "merged": "C:\\Users\\julia_000\\DailyFoto\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_top_material.xml",

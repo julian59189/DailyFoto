@@ -5,37 +5,43 @@
     density="560dpi"
     format="8"
     plugin-version="2.2.2"
-    timestamp="16664123132077"
+    timestamp="10855797492210"
     token="3173471437961047778"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="148" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="22" />
+        duration="0" />
     <task
         name="verifier"
-        duration="2" />
-
-    <artifact
-        location="C:\Users\julia_000\DailyFoto\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_2\classes.dex"
-        type="DEX" />
+        duration="0" />
 
     <build
-        timestamp="15872433646537"
+        timestamp="8521066866346"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Users\julia_000\DailyFoto\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
     </build>
     <build
-        timestamp="16664123132077"
+        timestamp="10680395842527"
         verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="C:\Users\julia_000\DailyFoto\app\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
+            type="RESOURCES" />
+    </build>
+    <build
+        timestamp="10855797492210"
+        verifier="COLD_SWAP_REQUESTED" />
+    <build
+        timestamp="35083378831010"
+        verifier="METHOD_ADDED" >
         <artifact
             location="C:\Users\julia_000\DailyFoto\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_2\classes.dex"
             type="DEX" />
