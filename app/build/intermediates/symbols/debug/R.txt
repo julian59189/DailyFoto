@@ -541,6 +541,7 @@ int id end 0x7f0c001b
 int id end_padder 0x7f0c006b
 int id expand_activities_button 0x7f0c0028
 int id expanded_menu 0x7f0c003b
+int id fragment_container 0x7f0c0057
 int id home 0x7f0c0004
 int id homeAsUp 0x7f0c000d
 int id icon 0x7f0c002c
@@ -552,7 +553,6 @@ int id line1 0x7f0c0064
 int id line3 0x7f0c0068
 int id listMode 0x7f0c0009
 int id list_item 0x7f0c002b
-int id mImageView 0x7f0c0057
 int id media_actions 0x7f0c0062
 int id middle 0x7f0c001c
 int id multiply 0x7f0c0014

@@ -1840,6 +1840,7 @@ containing a value of this type.
         public static final int end_padder=0x7f0c006b;
         public static final int expand_activities_button=0x7f0c0028;
         public static final int expanded_menu=0x7f0c003b;
+        public static final int fragment_container=0x7f0c0057;
         public static final int home=0x7f0c0004;
         public static final int homeAsUp=0x7f0c000d;
         public static final int icon=0x7f0c002c;
@@ -1851,7 +1852,6 @@ containing a value of this type.
         public static final int line3=0x7f0c0068;
         public static final int listMode=0x7f0c0009;
         public static final int list_item=0x7f0c002b;
-        public static final int mImageView=0x7f0c0057;
         public static final int media_actions=0x7f0c0062;
         public static final int middle=0x7f0c001c;
         public static final int multiply=0x7f0c0014;

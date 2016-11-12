@@ -33,13 +33,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.androiddev.julianeiler.dailyfoto.AndroidCustomGalleryActivity"
+            android:name="com.androiddev.julianeiler.dailyfoto.GalleryFragment"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/app_name"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
         </activity>
         <activity
-            android:name="com.androiddev.julianeiler.dailyfoto.AndroidDiplayImage"
+            android:name="com.androiddev.julianeiler.dailyfoto.ShowImageFragment"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/app_name"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" >

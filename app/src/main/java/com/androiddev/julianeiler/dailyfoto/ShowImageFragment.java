@@ -1,6 +1,7 @@
 package com.androiddev.julianeiler.dailyfoto;
 
 import android.app.Activity;
+import android.support.v4.app.Fragment;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -24,21 +25,20 @@ import java.util.ArrayList;
  * Created by Julian Eiler on 18.10.2016.
  */
 
-public class AndroidDiplayImage extends Activity {
-    private static final String TAG = "AndroidDiplayImage";
+public class ShowImageFragment extends Fragment {
+    private static final String TAG = "ShowImageFragment";
     ArrayList<String> f = new ArrayList<>();// list of file paths
     File[] listFile;
-    Context context = this;
 
 
-    /** Called when the activity is first created. */
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        Log.d(TAG, "onCreate");
-        setContentView(R.layout.display_single_image);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        View v = inflater.inflate(R.layout.display_single_image, container, false);
+
         getFromSdcard();
-        ImageView imageview = (ImageView) findViewById(R.id.PhoneImageView);
+        ImageView imageview = (ImageView) v.findViewById(R.id.PhoneImageView);
 
         Bitmap myBitmap = BitmapFactory.decodeFile(f.get(1));
 
@@ -48,11 +48,14 @@ public class AndroidDiplayImage extends Activity {
         Bitmap scaled = Bitmap.createScaledBitmap(myBitmap, 512, nh, true);
 
         imageview.setImageBitmap(scaled);
+
+        return v;
     }
+
 
     public void getFromSdcard()
     {
-        File file = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
+        File file = getActivity().getExternalFilesDir(Environment.DIRECTORY_PICTURES);
         //File file= new File(android.os.Environment.getExternalStorageDirectory(),"MapleBear");
         Log.d(TAG, "file:" + file);
 
@@ -68,5 +71,4 @@ public class AndroidDiplayImage extends Activity {
             }
         }
     }
-
 }

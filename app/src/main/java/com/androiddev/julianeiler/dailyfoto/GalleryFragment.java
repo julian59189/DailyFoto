@@ -1,6 +1,7 @@
 package com.androiddev.julianeiler.dailyfoto;
 
 import android.app.Activity;
+import android.support.v4.app.Fragment;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -23,7 +24,7 @@ import java.util.ArrayList;
  * Created by Julian Eiler on 18.10.2016.
  */
 
-public class AndroidCustomGalleryActivity extends Activity {
+public class GalleryFragment extends Fragment {
     private static final String TAG = "CustomGalleryActivity";
     private int count;
     private Bitmap[] thumbnails;
@@ -32,24 +33,27 @@ public class AndroidCustomGalleryActivity extends Activity {
     private ImageAdapter imageAdapter;
     ArrayList<String> f = new ArrayList<>();// list of file paths
     File[] listFile;
-    Context context = this;
 
 
-    /** Called when the activity is first created. */
+
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        Log.d(TAG, "onCreate");
-        setContentView(R.layout.display_gallery);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        View v = inflater.inflate(R.layout.display_gallery, container, false);
+
         getFromSdcard();
-        GridView imagegrid = (GridView) findViewById(R.id.PhoneImageGrid);
+        GridView imagegrid = (GridView) v.findViewById(R.id.PhoneImageGrid);
         imageAdapter = new ImageAdapter();
         imagegrid.setAdapter(imageAdapter);
+
+        return v;
     }
+
 
     public void getFromSdcard()
     {
-        File file = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
+        File file = getActivity().getExternalFilesDir(Environment.DIRECTORY_PICTURES);
         Log.d(TAG, "storageDir external:" + file);
         //File file= new File(android.os.Environment.getExternalStorageDirectory(),"MapleBear");
         Log.d(TAG, "file:" + file);
@@ -71,7 +75,7 @@ public class AndroidCustomGalleryActivity extends Activity {
         private LayoutInflater mInflater;
 
         ImageAdapter() {
-            mInflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            mInflater = (LayoutInflater) getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         }
 
         public int getCount() {

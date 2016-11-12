@@ -34,8 +34,9 @@
             android:layout_weight="1"/>
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/mImageView"
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/fragment_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="99"
@@ -44,8 +45,7 @@
         android:horizontalSpacing="10dp"
         android:numColumns="auto_fit"
         android:stretchMode="columnWidth"
-        android:verticalSpacing="10dp" />
-
+        android:verticalSpacing="10dp"/>
 
     <Button
         android:id="@+id/btnTakePicture"

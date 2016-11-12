@@ -1,6 +1,5 @@
 package com.androiddev.julianeiler.dailyfoto;
 
-
 import android.Manifest;
 import android.app.NotificationManager;
 import android.content.Context;
@@ -14,19 +13,17 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
-import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -61,6 +58,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
+
+        if (findViewById(R.id.fragment_container) != null) {
+
+            // However, if we're being restored from a previous state,
+            // then we don't need to do anything and should return or else
+            // we could end up with overlapping fragments.
+            if (savedInstanceState != null) {
+                return;
+            }
+
+            // Create a new Fragment to be placed in the activity layout
+            ShowImageFragment imageFragment = new ShowImageFragment();
+            GalleryFragment galleryFragment = new GalleryFragment();
+
+            // In case this activity was started with special instructions from an
+            // Intent, pass the Intent's extras to the fragment as arguments
+            imageFragment.setArguments(getIntent().getExtras());
+
+            // Add the fragment to the 'fragment_container' FrameLayout
+            getSupportFragmentManager().beginTransaction()
+                    .add(R.id.fragment_container, imageFragment).commit();
+        }
 
         Log.d(TAG, "checks done");
 
@@ -325,7 +344,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnTakePicture = (Button) findViewById(R.id.btnTakePicture);
         btnDebug = (Button) findViewById(R.id.btnDebug);
         btnDebug2 = (Button) findViewById(R.id.btnDebug2);
-        img_view = (ImageView) findViewById(R.id.mImageView);
 
         btnShow.setOnClickListener(this);
         btnClear.setOnClickListener(this);
@@ -360,7 +378,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btnClearNotification:
                 Log.d(TAG, "btnClearNotification");
                 Toast.makeText(MainActivity.this, "Button Clicked: btnClearNotification", Toast.LENGTH_SHORT).show();
-                img_view.setImageResource(R.drawable.ic_camera_black_24dp);
                 manager.cancel(11);
                 break;
 
@@ -379,16 +396,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //                File folder = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
 //                allFiles = folder.listFiles();
 //                new SingleMediaScanner(MainActivity.this, allFiles[0]);
-                Intent i_mult = new Intent(getApplicationContext(), AndroidCustomGalleryActivity.class);
-                startActivity(i_mult);
+                if (findViewById(R.id.fragment_container) != null) {
+
+                    // Create a new Fragment to be placed in the activity layout
+                    GalleryFragment galleryFragment = new GalleryFragment();
+                    galleryFragment.setArguments(getIntent().getExtras());
+
+                    FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                    transaction.replace(R.id.fragment_container, galleryFragment);
+                    transaction.addToBackStack(null);
+                    transaction.commit();
+                }
                 break;
 
             case R.id.btnDebug2:
                 Log.d(TAG, "btnDebug2");
                 Toast.makeText(MainActivity.this, "Button Clicked: btnDebug2", Toast.LENGTH_SHORT).show();
 
-                Intent i_single = new Intent(getApplicationContext(),AndroidDiplayImage.class);
-                startActivity(i_single);
+                if (findViewById(R.id.fragment_container) != null) {
+
+                    // Create a new Fragment to be placed in the activity layout
+                    ShowImageFragment imageFragment = new ShowImageFragment();
+
+                    FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                    transaction.replace(R.id.fragment_container, imageFragment);
+                    transaction.addToBackStack(null);
+                    transaction.commit();
+                }
                 break;
         }
     }
