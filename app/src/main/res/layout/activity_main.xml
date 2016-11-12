@@ -34,8 +34,8 @@
             android:layout_weight="1"/>
     </LinearLayout>
 
-    <GridView
-        android:id="@+id/mGridView"
+    <ImageView
+        android:id="@+id/mImageView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="99"

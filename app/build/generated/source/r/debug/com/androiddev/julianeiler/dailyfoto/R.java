@@ -1851,7 +1851,7 @@ containing a value of this type.
         public static final int line3=0x7f0c0068;
         public static final int listMode=0x7f0c0009;
         public static final int list_item=0x7f0c002b;
-        public static final int mGridView=0x7f0c0057;
+        public static final int mImageView=0x7f0c0057;
         public static final int media_actions=0x7f0c0062;
         public static final int middle=0x7f0c001c;
         public static final int multiply=0x7f0c0014;

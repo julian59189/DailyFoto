@@ -27,6 +27,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.GridView;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import java.io.File;
@@ -35,7 +36,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     private static final String TAG = "MainActivity";
     String folder_main = "DailyFoto";
@@ -45,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnShow, btnClear, btnTakePicture, btnDebug, btnDebug2;
     NotificationManager manager;
     String mCurrentPhotoPath;
+    ImageView img_view;
     Uri photoURI;
     Context context = this;
 
@@ -60,91 +62,13 @@ public class MainActivity extends AppCompatActivity {
 
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
-        myToolbar.setLogo(R.drawable.selfie);
+        //myToolbar.setLogo(R.drawable.selfie);
 
 
         Log.d(TAG, "checks done");
 
         manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
 
-        btnShow.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View arg0) {
-                Log.d(TAG, "btnShow OnclickListener");
-                NotificationCompat.Builder mBuilder =
-                        new NotificationCompat.Builder(MainActivity.this)
-                                .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.drawable.selfie_icon1))
-                                .setSmallIcon(R.drawable.selfie1)
-                                .setContentTitle("Take a fucking selfie")
-                                .setContentText("NOW!");
-                // Creates an explicit intent for an Activity in your app
-                Intent resultIntent = new Intent(MainActivity.this, ResultActivity.class);
-
-                // The stack builder object will contain an artificial back stack for the
-                // started Activity.
-                // This ensures that navigating backward from the Activity leads out of
-                // your application to the Home screen.
-                //TaskStackBuilder stackBuilder = TaskStackBuilder.create(MainActivity.this);
-                // Adds the back stack for the Intent (but not the Intent itself)
-                //stackBuilder.addParentStack(ResultActivity.class);
-                // Adds the Intent that starts the Activity to the top of the stack
-                //stackBuilder.addNextIntent(resultIntent);
-                //PendingIntent resultPendingIntent =
-                //        stackBuilder.getPendingIntent(
-                //                0,
-                //                PendingIntent.FLAG_UPDATE_CURRENT
-                //        );
-                //mBuilder.setContentIntent(resultPendingIntent);
-                NotificationManager mNotificationManager =
-                        (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-                // mId allows you to update the notification later on.
-                mNotificationManager.notify(11, mBuilder.build());
-
-            }
-        });
-
-        btnClear.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View arg0) {
-                Log.d(TAG, "btnClear OnclickListener");
-                Toast.makeText(MainActivity.this, "Button Clicked: btnClear", Toast.LENGTH_SHORT).show();
-                manager.cancel(11);
-            }
-        });
-
-        btnTakePicture.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View arg0) {
-                Log.d(TAG, "btnTakePicture OnclickListener");
-                dispatchTakePictureIntent();
-
-                //btnTakePicture.setText("Retake Picture");
-            }
-        });
-
-        btnDebug.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View arg0) {
-                Log.d(TAG, "btnDebug OnclickListener");
-//                File folder = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
-//                allFiles = folder.listFiles();
-//                new SingleMediaScanner(MainActivity.this, allFiles[0]);
-                Intent i = new Intent(getApplicationContext(),
-                        AndroidCustomGalleryActivity.class);
-                startActivity(i);
-            }
-        });
-
-        btnDebug2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View arg0) {
-                Log.d(TAG, "btnDebug2 OnclickListener");
-                Intent i = new Intent(getApplicationContext(),
-                        AndroidDiplayImage.class);
-                startActivity(i);
-            }
-        });
 
         Log.d(TAG, "onClickListeners Created");
     }
@@ -173,6 +97,7 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.action_settings:
                 // User chose the "Settings" item, show the app settings UI...
+                img_view.setImageResource(R.drawable.selfie);
                 return true;
 
             case R.id.action_favorite:
@@ -311,6 +236,73 @@ public class MainActivity extends AppCompatActivity {
         btnTakePicture = (Button) findViewById(R.id.btnTakePicture);
         btnDebug = (Button) findViewById(R.id.btnDebug);
         btnDebug2 = (Button) findViewById(R.id.btnDebug2);
+        img_view = (ImageView) findViewById(R.id.mImageView);
+
+        btnShow.setOnClickListener(this);
+        btnClear.setOnClickListener(this);
+        btnTakePicture.setOnClickListener(this);
+        btnDebug.setOnClickListener(this);
+        btnDebug2.setOnClickListener(this);
+    }
+
+    /*
+    Handle Buttons
+     */
+    @Override
+    public void onClick(View v) {
+        switch (v.getId())
+        {
+            case R.id.btnShowNotification:
+                Log.d(TAG, "btnShowNotification");
+                Toast.makeText(MainActivity.this, "Button Clicked: btnShowNotification", Toast.LENGTH_SHORT).show();
+
+                NotificationCompat.Builder mBuilder =
+                        new NotificationCompat.Builder(MainActivity.this)
+                                .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.drawable.selfie_icon1))
+                                .setSmallIcon(R.drawable.selfie1)
+                                .setContentTitle("Take a fucking selfie")
+                                .setContentText("NOW!");
+                NotificationManager mNotificationManager =
+                        (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+                // mId allows you to update the notification later on.
+                mNotificationManager.notify(11, mBuilder.build());
+                break;
+
+            case R.id.btnClearNotification:
+                Log.d(TAG, "btnClearNotification");
+                Toast.makeText(MainActivity.this, "Button Clicked: btnClearNotification", Toast.LENGTH_SHORT).show();
+
+                manager.cancel(11);
+                break;
+
+            case R.id.btnTakePicture:
+                Log.d(TAG, "btnTakePicture");
+                Toast.makeText(MainActivity.this, "Button Clicked: btnTakePicture", Toast.LENGTH_SHORT).show();
+
+                dispatchTakePictureIntent();
+
+                //btnTakePicture.setText("Retake Picture");
+                break;
+
+            case R.id.btnDebug:
+                Log.d(TAG, "btnDebug");
+                Toast.makeText(MainActivity.this, "Button Clicked: btnDebug", Toast.LENGTH_SHORT).show();
+
+//                File folder = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
+//                allFiles = folder.listFiles();
+//                new SingleMediaScanner(MainActivity.this, allFiles[0]);
+                Intent i_mult = new Intent(getApplicationContext(), AndroidCustomGalleryActivity.class);
+                startActivity(i_mult);
+                break;
+
+            case R.id.btnDebug2:
+                Log.d(TAG, "btnDebug2");
+                Toast.makeText(MainActivity.this, "Button Clicked: btnDebug2", Toast.LENGTH_SHORT).show();
+
+                Intent i_single = new Intent(getApplicationContext(),AndroidDiplayImage.class);
+                startActivity(i_single);
+                break;
+        }
     }
 
     public class SingleMediaScanner implements MediaScannerConnection.MediaScannerConnectionClient {
