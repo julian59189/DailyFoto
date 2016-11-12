@@ -42,7 +42,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     String folder_main = "DailyFoto";
     private static final int REQUEST_TAKE_PHOTO = 1;
     final private int MY_PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE = 0;
-    GridView mGridView;
     Button btnShow, btnClear, btnTakePicture, btnDebug, btnDebug2;
     NotificationManager manager;
     String mCurrentPhotoPath;
@@ -62,21 +61,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
-        //myToolbar.setLogo(R.drawable.selfie);
-
 
         Log.d(TAG, "checks done");
 
         manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-
-
         Log.d(TAG, "onClickListeners Created");
     }
 
     @Override
     public void onResume() {
         super.onResume();  // Always call the superclass method first
-        checkPermissions();
+        //checkPermissions();
     }
 
     @Override
@@ -91,27 +86,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         return true;
     }
 
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.action_settings:
-                // User chose the "Settings" item, show the app settings UI...
-                img_view.setImageResource(R.drawable.selfie);
-                return true;
-
-            case R.id.action_favorite:
-                // User chose the "Favorite" action, mark the current item
-                // as a favorite...
-                return true;
-
-            default:
-                // If we got here, the user's action was not recognized.
-                // Invoke the superclass to handle it.
-                return super.onOptionsItemSelected(item);
-
-        }
-    }
 
     private void dispatchTakePictureIntent() {
         Log.d(TAG, "dispatchTakePictureIntent");
@@ -138,8 +112,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 // add picture to gallery
                 galleryAddPic();
-
-                //startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
             }
         }
     }
@@ -149,13 +121,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         // Create an image file name
         // String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-        String timeStamp = new SimpleDateFormat("yyyyMMdd").format(new Date());
-        String imageFileName = "JPEG_" + timeStamp + "_";
+        String timeStamp = new SimpleDateFormat("yyyy_MM_dd").format(new Date());
+        String imageFileName = "Image_" + timeStamp + "_";
 
         //File storageDir = new File(Environment.getExternalStorageDirectory(), folder_main);
         File storageDir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
+        Log.d(TAG, "storageDir:" + storageDir);
 
         File image = new File(storageDir, imageFileName + ".jpg");
+
 
         // in case I want temporary file (adds unique suffix)
 
@@ -178,7 +152,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-
     private void checkPermissions() {
         //Log.d(TAG, "checkPermissions");
         // Assume thisActivity is the current activity
@@ -198,8 +171,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
-    public void onRequestPermissionsResult(int requestCode,
-                                           String permissions[], int[] grantResults) {
+    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
         switch (requestCode) {
             case MY_PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE: {
 
@@ -229,81 +201,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
 
-    private void initialise() {
-        Log.d(TAG, "initialize");
-        btnShow = (Button) findViewById(R.id.btnShowNotification);
-        btnClear = (Button) findViewById(R.id.btnClearNotification);
-        btnTakePicture = (Button) findViewById(R.id.btnTakePicture);
-        btnDebug = (Button) findViewById(R.id.btnDebug);
-        btnDebug2 = (Button) findViewById(R.id.btnDebug2);
-        img_view = (ImageView) findViewById(R.id.mImageView);
 
-        btnShow.setOnClickListener(this);
-        btnClear.setOnClickListener(this);
-        btnTakePicture.setOnClickListener(this);
-        btnDebug.setOnClickListener(this);
-        btnDebug2.setOnClickListener(this);
-    }
-
-    /*
-    Handle Buttons
-     */
-    @Override
-    public void onClick(View v) {
-        switch (v.getId())
-        {
-            case R.id.btnShowNotification:
-                Log.d(TAG, "btnShowNotification");
-                Toast.makeText(MainActivity.this, "Button Clicked: btnShowNotification", Toast.LENGTH_SHORT).show();
-
-                NotificationCompat.Builder mBuilder =
-                        new NotificationCompat.Builder(MainActivity.this)
-                                .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.drawable.selfie_icon1))
-                                .setSmallIcon(R.drawable.selfie1)
-                                .setContentTitle("Take a fucking selfie")
-                                .setContentText("NOW!");
-                NotificationManager mNotificationManager =
-                        (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-                // mId allows you to update the notification later on.
-                mNotificationManager.notify(11, mBuilder.build());
-                break;
-
-            case R.id.btnClearNotification:
-                Log.d(TAG, "btnClearNotification");
-                Toast.makeText(MainActivity.this, "Button Clicked: btnClearNotification", Toast.LENGTH_SHORT).show();
-
-                manager.cancel(11);
-                break;
-
-            case R.id.btnTakePicture:
-                Log.d(TAG, "btnTakePicture");
-                Toast.makeText(MainActivity.this, "Button Clicked: btnTakePicture", Toast.LENGTH_SHORT).show();
-
-                dispatchTakePictureIntent();
-
-                //btnTakePicture.setText("Retake Picture");
-                break;
-
-            case R.id.btnDebug:
-                Log.d(TAG, "btnDebug");
-                Toast.makeText(MainActivity.this, "Button Clicked: btnDebug", Toast.LENGTH_SHORT).show();
-
-//                File folder = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
-//                allFiles = folder.listFiles();
-//                new SingleMediaScanner(MainActivity.this, allFiles[0]);
-                Intent i_mult = new Intent(getApplicationContext(), AndroidCustomGalleryActivity.class);
-                startActivity(i_mult);
-                break;
-
-            case R.id.btnDebug2:
-                Log.d(TAG, "btnDebug2");
-                Toast.makeText(MainActivity.this, "Button Clicked: btnDebug2", Toast.LENGTH_SHORT).show();
-
-                Intent i_single = new Intent(getApplicationContext(),AndroidDiplayImage.class);
-                startActivity(i_single);
-                break;
-        }
-    }
 
     public class SingleMediaScanner implements MediaScannerConnection.MediaScannerConnectionClient {
 
@@ -391,13 +289,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Log.d(TAG, "context_dir: " + context.getFilesDir());
         File imgFile = new File( yourFilePath );
 
-
-
         //File imgFile = new  File("Android/data/com.androiddev.julianeiler.dailyfoto/files/Pictures/JPEG_20161018_.jpg");
         if(imgFile.exists()){
             Log.d(TAG, "imageFileexist");
-
-
             int resID = getResources().getIdentifier(yourFilePath, null, getPackageName());
             //mGridView.setImageResource(resID);
 
@@ -419,6 +313,113 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Uri contentUri = Uri.fromFile(f);
         mediaScanIntent.setData(contentUri);
         this.sendBroadcast(mediaScanIntent);
+    }
+
+    /*
+    Initialize all elements in XML
+     */
+    private void initialise() {
+        Log.d(TAG, "initialize");
+        btnShow = (Button) findViewById(R.id.btnShowNotification);
+        btnClear = (Button) findViewById(R.id.btnClearNotification);
+        btnTakePicture = (Button) findViewById(R.id.btnTakePicture);
+        btnDebug = (Button) findViewById(R.id.btnDebug);
+        btnDebug2 = (Button) findViewById(R.id.btnDebug2);
+        img_view = (ImageView) findViewById(R.id.mImageView);
+
+        btnShow.setOnClickListener(this);
+        btnClear.setOnClickListener(this);
+        btnTakePicture.setOnClickListener(this);
+        btnDebug.setOnClickListener(this);
+        btnDebug2.setOnClickListener(this);
+    }
+
+    /*
+    Handle Buttons
+     */
+    @Override
+    public void onClick(View v) {
+        switch (v.getId())
+        {
+            case R.id.btnShowNotification:
+                Log.d(TAG, "btnShowNotification");
+                Toast.makeText(MainActivity.this, "Button Clicked: btnShowNotification", Toast.LENGTH_SHORT).show();
+
+                NotificationCompat.Builder mBuilder =
+                        new NotificationCompat.Builder(MainActivity.this)
+                                .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.drawable.selfie_icon1))
+                                .setSmallIcon(R.drawable.selfie1)
+                                .setContentTitle("Take a fucking selfie")
+                                .setContentText("NOW!");
+                NotificationManager mNotificationManager =
+                        (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+                // mId allows you to update the notification later on.
+                mNotificationManager.notify(11, mBuilder.build());
+                break;
+
+            case R.id.btnClearNotification:
+                Log.d(TAG, "btnClearNotification");
+                Toast.makeText(MainActivity.this, "Button Clicked: btnClearNotification", Toast.LENGTH_SHORT).show();
+                img_view.setImageResource(R.drawable.ic_camera_black_24dp);
+                manager.cancel(11);
+                break;
+
+            case R.id.btnTakePicture:
+                Log.d(TAG, "btnTakePicture");
+                Toast.makeText(MainActivity.this, "Button Clicked: btnTakePicture", Toast.LENGTH_SHORT).show();
+
+                dispatchTakePictureIntent();
+                //btnTakePicture.setText("Retake Picture");
+                break;
+
+            case R.id.btnDebug:
+                Log.d(TAG, "btnDebug");
+                Toast.makeText(MainActivity.this, "Button Clicked: btnDebug", Toast.LENGTH_SHORT).show();
+
+//                File folder = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
+//                allFiles = folder.listFiles();
+//                new SingleMediaScanner(MainActivity.this, allFiles[0]);
+                Intent i_mult = new Intent(getApplicationContext(), AndroidCustomGalleryActivity.class);
+                startActivity(i_mult);
+                break;
+
+            case R.id.btnDebug2:
+                Log.d(TAG, "btnDebug2");
+                Toast.makeText(MainActivity.this, "Button Clicked: btnDebug2", Toast.LENGTH_SHORT).show();
+
+                Intent i_single = new Intent(getApplicationContext(),AndroidDiplayImage.class);
+                startActivity(i_single);
+                break;
+        }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_settings:
+                Toast.makeText(MainActivity.this, "Button Clicked: action_settings", Toast.LENGTH_SHORT).show();
+
+                //img_view.setImageResource(R.drawable.selfie);
+                return true;
+
+            case R.id.action_favorite:
+                Toast.makeText(MainActivity.this, "Button Clicked: action_favorite", Toast.LENGTH_SHORT).show();
+
+                // as a favorite...
+                return true;
+
+            case R.id.action_search:
+                Toast.makeText(MainActivity.this, "Button Clicked: action_search", Toast.LENGTH_SHORT).show();
+
+                // as a favorite...
+                return true;
+
+            default:
+                // If we got here, the user's action was not recognized.
+                // Invoke the superclass to handle it.
+                return super.onOptionsItemSelected(item);
+
+        }
     }
 
 }

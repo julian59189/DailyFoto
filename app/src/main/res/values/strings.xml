@@ -7,8 +7,8 @@
     <string name="show_notification">Show Notification</string>
     <string name="clear_notification">Clear Notification</string>
     <string name="take_picture">Take Picture</string>
-    <string name="debug">Debug</string>
-    <string name="debug2">Debug2</string>
+    <string name="debug">Gallery</string>
+    <string name="debug2">Single Image</string>
     <string name="singleimagefromgallery">SingleImageFromGallery</string>
     <string name="diplayimagesinfolder">diplayImagesInFolder</string>
     <string name="grant_storage_permission">Grant Storage permissions</string>

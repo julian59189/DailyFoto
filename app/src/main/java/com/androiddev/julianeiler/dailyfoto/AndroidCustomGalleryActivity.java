@@ -50,6 +50,7 @@ public class AndroidCustomGalleryActivity extends Activity {
     public void getFromSdcard()
     {
         File file = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
+        Log.d(TAG, "storageDir external:" + file);
         //File file= new File(android.os.Environment.getExternalStorageDirectory(),"MapleBear");
         Log.d(TAG, "file:" + file);
 
@@ -100,7 +101,9 @@ public class AndroidCustomGalleryActivity extends Activity {
             }
 
             Bitmap myBitmap = BitmapFactory.decodeFile(f.get(position));
-            holder.imageview.setImageBitmap(myBitmap);
+            int nh = (int) ( myBitmap.getHeight() * (512.0 / myBitmap.getWidth()) );
+            Bitmap scaled = Bitmap.createScaledBitmap(myBitmap, 512, nh, true);
+            holder.imageview.setImageBitmap(scaled);
             return convertView;
         }
     }

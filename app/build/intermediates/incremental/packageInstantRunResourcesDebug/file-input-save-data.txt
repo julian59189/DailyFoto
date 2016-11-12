@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sun Nov 06 13:33:51 CET 2016
+#Sat Nov 12 22:18:13 CET 2016
 14.set=ANDROID_RESOURCE
 180.file=C\:\\Users\\julia_000\\DailyFoto\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\abc_screen_simple_overlay_action_mode.xml
 118.set=ANDROID_RESOURCE

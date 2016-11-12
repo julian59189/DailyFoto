@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
@@ -24,7 +25,7 @@ import java.util.ArrayList;
  */
 
 public class AndroidDiplayImage extends Activity {
-    private static final String TAG = "CustomGalleryActivity";
+    private static final String TAG = "AndroidDiplayImage";
     ArrayList<String> f = new ArrayList<>();// list of file paths
     File[] listFile;
     Context context = this;
@@ -39,8 +40,14 @@ public class AndroidDiplayImage extends Activity {
         getFromSdcard();
         ImageView imageview = (ImageView) findViewById(R.id.PhoneImageView);
 
-        Bitmap myBitmap = BitmapFactory.decodeFile(f.get(0));
-        imageview.setImageBitmap(myBitmap);
+        Bitmap myBitmap = BitmapFactory.decodeFile(f.get(1));
+
+        //File imgFile = new  File("/storage/emulated/0/Android/data/com.androiddev.julianeiler.dailyfoto/files/Pictures/Image_2016_11_12_.jpg");
+        //Bitmap myBitmap = BitmapFactory.decodeFile(imgFile.getAbsolutePath());
+        int nh = (int) ( myBitmap.getHeight() * (512.0 / myBitmap.getWidth()) );
+        Bitmap scaled = Bitmap.createScaledBitmap(myBitmap, 512, nh, true);
+
+        imageview.setImageBitmap(scaled);
     }
 
     public void getFromSdcard()
