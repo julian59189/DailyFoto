@@ -5,33 +5,46 @@
     density="560dpi"
     format="8"
     plugin-version="2.2.2"
-    timestamp="22587870569551"
+    timestamp="36375422361412"
     token="3173471437961047778"
-    verifier="COLD_SWAP_REQUESTED" >
+    verifier="R_CLASS_CHANGE" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="389" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="84" />
     <task
         name="verifier"
-        duration="0" />
+        duration="29" />
+
+    <artifact
+        location="C:\Users\julia_000\DailyFoto\app\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
+        type="RESOURCES" />
+    <artifact
+        location="C:\Users\julia_000\DailyFoto\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_0\classes.dex"
+        type="DEX" />
+    <artifact
+        location="C:\Users\julia_000\DailyFoto\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_2\classes.dex"
+        type="DEX" />
 
     <build
-        timestamp="14546494434355"
-        verifier="BINARY_MANIFEST_FILE_CHANGE" >
+        timestamp="35227039810193"
+        verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Users\julia_000\DailyFoto\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
     </build>
     <build
-        timestamp="15219919481839"
-        verifier="COLD_SWAP_REQUESTED" >
+        timestamp="36375422361412"
+        verifier="R_CLASS_CHANGE" >
+        <artifact
+            location="C:\Users\julia_000\DailyFoto\app\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
+            type="RESOURCES" />
         <artifact
             location="C:\Users\julia_000\DailyFoto\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_0\classes.dex"
             type="DEX" />
@@ -39,25 +52,5 @@
             location="C:\Users\julia_000\DailyFoto\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_2\classes.dex"
             type="DEX" />
     </build>
-    <build
-        timestamp="20760519820421"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="C:\Users\julia_000\DailyFoto\app\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
-            type="RESOURCES" />
-    </build>
-    <build
-        timestamp="22574045763746"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="C:\Users\julia_000\DailyFoto\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_6\classes.dex"
-            type="DEX" />
-        <artifact
-            location="C:\Users\julia_000\DailyFoto\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_1\classes.dex"
-            type="DEX" />
-    </build>
-    <build
-        timestamp="22587870569551"
-        verifier="COLD_SWAP_REQUESTED" />
 
 </instant-run>

@@ -47,4 +47,9 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="about_us">Welcome to my application.
+    This application was developed for personal purposes.
+    I am Julian Eiler, a M.Sc. student of electrical engineering and information technology.
+    I am currently working on my masters thesis and develop this application in my freetime.</string>
 </resources>
