@@ -23,7 +23,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
         <activity
-            android:name="com.androiddev.julianeiler.dailyfoto.MainActivity"
+            android:name="com.androiddev.julianeiler.dailyfoto.activity.MainActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/app_name"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
@@ -34,17 +34,15 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.androiddev.julianeiler.dailyfoto.GalleryFragment"
+            android:name="com.androiddev.julianeiler.dailyfoto.fragment.GalleryFragment"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/app_name"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
-        </activity>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name="com.androiddev.julianeiler.dailyfoto.ShowImageFragment"
+            android:name="com.androiddev.julianeiler.dailyfoto.fragment.ShowImageFragment"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/app_name"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
-        </activity>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
 
         <provider
             android:name="android.support.v4.content.FileProvider"
@@ -55,6 +53,9 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
         </provider>
+
+        <activity android:name="com.androiddev.julianeiler.dailyfoto.activity.AboutUsActivity" />
+        <activity android:name="com.androiddev.julianeiler.dailyfoto.activity.PrivacyPolicyActivity" />
     </application>
 
 </manifest>

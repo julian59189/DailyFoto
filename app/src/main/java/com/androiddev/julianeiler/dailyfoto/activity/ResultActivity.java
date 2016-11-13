@@ -1,4 +1,4 @@
-package com.androiddev.julianeiler.dailyfoto;
+package com.androiddev.julianeiler.dailyfoto.activity;
 
 /**
  * Result activity for callstack

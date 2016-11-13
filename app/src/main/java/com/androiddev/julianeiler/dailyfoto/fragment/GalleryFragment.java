@@ -1,4 +1,4 @@
-package com.androiddev.julianeiler.dailyfoto;
+package com.androiddev.julianeiler.dailyfoto.fragment;
 
 import android.app.Activity;
 import android.support.v4.app.Fragment;
@@ -14,6 +14,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
+
+import com.androiddev.julianeiler.dailyfoto.R;
 
 import java.io.File;
 import java.util.ArrayList;
