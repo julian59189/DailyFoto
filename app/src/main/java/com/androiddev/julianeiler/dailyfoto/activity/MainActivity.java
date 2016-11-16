@@ -62,6 +62,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     // Good tutorial for toolbar
     // https://guides.codepath.com/android/Using-the-App-ToolBar
 
+    // next change Toolbar design for different views
+
     private NavigationView navigationView;
     private DrawerLayout drawer;
     private View navHeader;
