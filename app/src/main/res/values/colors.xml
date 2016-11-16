@@ -9,5 +9,10 @@
     <color name="colorAccent">#FFFFFF</color>
     <color name="colorBar">#212121</color>
 
+    <!-- App bar stuff-->
+    <color name="cursorAccent">#ff0000ff</color>
+    <color name="controlNormal">#ff00ffff</color>
+    <color name="controlActivated">#ffff00ff</color>
+
     <color name="black_overlay">#66000000</color>
 </resources>

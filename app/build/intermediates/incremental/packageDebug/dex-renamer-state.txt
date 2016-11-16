@@ -1,4 +1,4 @@
-#Sun Nov 13 19:35:09 CET 2016
+#Wed Nov 16 08:26:37 CET 2016
 base.0=C\:\\Users\\julia_000\\DailyFoto\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_c39684926bf623c402b34eb7ec6b4b594978ba69
 renamed.1=classes2.dex
 renamed.0=classes.dex

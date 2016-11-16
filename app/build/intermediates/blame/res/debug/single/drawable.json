@@ -108,6 +108,10 @@
         "source": "C:\\Users\\julia_000\\DailyFoto\\app\\src\\main\\res\\drawable\\selfie_icon_256.png"
     },
     {
+        "merged": "C:\\Users\\julia_000\\DailyFoto\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_ic_visibility.xml",
+        "source": "C:\\Users\\julia_000\\DailyFoto\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.2.1\\res\\drawable\\design_ic_visibility.xml"
+    },
+    {
         "merged": "C:\\Users\\julia_000\\DailyFoto\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_camera_black_24dp.png",
         "source": "C:\\Users\\julia_000\\DailyFoto\\app\\src\\main\\res\\drawable\\ic_camera_black_24dp.png"
     },
@@ -116,16 +120,12 @@
         "source": "C:\\Users\\julia_000\\DailyFoto\\app\\src\\main\\res\\drawable\\selfie.png"
     },
     {
-        "merged": "C:\\Users\\julia_000\\DailyFoto\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_ic_visibility.xml",
-        "source": "C:\\Users\\julia_000\\DailyFoto\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.2.1\\res\\drawable\\design_ic_visibility.xml"
+        "merged": "C:\\Users\\julia_000\\DailyFoto\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\navigation_empty_icon.xml",
+        "source": "C:\\Users\\julia_000\\DailyFoto\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.2.1\\res\\drawable\\navigation_empty_icon.xml"
     },
     {
         "merged": "C:\\Users\\julia_000\\DailyFoto\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_top_material.xml",
         "source": "C:\\Users\\julia_000\\DailyFoto\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\drawable\\abc_cab_background_top_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\julia_000\\DailyFoto\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\navigation_empty_icon.xml",
-        "source": "C:\\Users\\julia_000\\DailyFoto\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.2.1\\res\\drawable\\navigation_empty_icon.xml"
     },
     {
         "merged": "C:\\Users\\julia_000\\DailyFoto\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_internal_bg.xml",
@@ -180,11 +180,11 @@
         "source": "C:\\Users\\julia_000\\DailyFoto\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\drawable\\abc_textfield_search_material.xml"
     },
     {
-        "merged": "C:\\Users\\julia_000\\DailyFoto\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_tick_mark_material.xml",
-        "source": "C:\\Users\\julia_000\\DailyFoto\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\drawable\\abc_seekbar_tick_mark_material.xml"
-    },
-    {
         "merged": "C:\\Users\\julia_000\\DailyFoto\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bg_circle.xml",
         "source": "C:\\Users\\julia_000\\DailyFoto\\app\\src\\main\\res\\drawable\\bg_circle.xml"
+    },
+    {
+        "merged": "C:\\Users\\julia_000\\DailyFoto\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_tick_mark_material.xml",
+        "source": "C:\\Users\\julia_000\\DailyFoto\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\drawable\\abc_seekbar_tick_mark_material.xml"
     }
 ]

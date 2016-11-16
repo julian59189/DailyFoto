@@ -59,6 +59,8 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+    // Good tutorial for toolbar
+    // https://guides.codepath.com/android/Using-the-App-ToolBar
 
     private NavigationView navigationView;
     private DrawerLayout drawer;
@@ -111,6 +113,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        //getSupportActionBar().setDisplayShowTitleEnabled(false);
+
+        // Method to Display an Icon in the toolbar
+//        getSupportActionBar().setDisplayShowHomeEnabled(true);
+//        getSupportActionBar().setLogo(R.mipmap.ic_launcher);
+//        getSupportActionBar().setDisplayUseLogoEnabled(true);
 
         mHandler = new Handler();
 
